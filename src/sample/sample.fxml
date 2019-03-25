@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="15.0" layoutY="14.0" text="Start Directory:" />
+        <Label layoutX="15.0" layoutY="48.0" text="Format of File:" />
+        <Label layoutX="14.0" layoutY="84.0" text="Search text:" />
+        <TextField fx:id="start_dir" layoutX="135.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="198.0" />
+        <TextField fx:id="file_format" layoutX="135.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="198.0" promptText=".log">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="search_text" layoutX="135.0" layoutY="83.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="198.0" />
+        <Button fx:id="button_find" layoutX="422.0" layoutY="36.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="80.0" text="Find" />
+        <TabPane fx:id="tabPane" layoutX="34.0" layoutY="138.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="tab" text="                ">
+                    <content>
+                        <ScrollPane fx:id="scrollPane" prefHeight="155.0" prefWidth="223.0">
+                            <content>
+                                <VBox fx:id="result_list" prefHeight="156.0" prefWidth="202.0" />
+                            </content>
+                        </ScrollPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ScrollPane fx:id="reading" layoutX="322.0" layoutY="138.0" prefHeight="200.0" prefWidth="200.0">
+            <content>
+                <VBox fx:id="data_currentFile" prefHeight="200.0" prefWidth="201.0" />
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
